@@ -1,6 +1,6 @@
 **NFT DJANGO GENERATOR**
 
-![](static/empty.png)
+![](static/NFT-Generator.png)
 
 ---
 
