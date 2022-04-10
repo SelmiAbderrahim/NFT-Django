@@ -1,0 +1,33 @@
+{% load static %}
+
+
+<!--partials/results.html-->
+
+<section class="container p-6 mx-auto " id="results">
+
+    <h2 class="text-xl font-medium text-gray-800 capitalize dark:text-white md:text-2xl">Results</h2>
+
+    <div class="flex items-center justify-center">
+
+        <div class="{% if collection %}grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4{% else %}flex justify-center items-center{% endif %}">
+
+                {% for result in collection.images.all %}
+
+                <div class="w-full max-w-xs text-center">
+
+                    <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="{{ result.image.url }}" alt="avatar"/>
+
+                </div>
+
+                {% empty %}
+
+                <img class="object-center transform scale-50" src="{% static 'empty.png' %}" alt="empty resulsts">
+
+                {% endfor %}
+
+
+        </div>
+
+    </div>
+
+</section>

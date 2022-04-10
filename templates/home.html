@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="flex min-h-screen w-full gap-6 p-4" id="content">
+
+    <div class="min-h-screen w-1/3 shadow-lg p-2">
+
+        {% include "partials/generate-avatar-form.html" %}
+
+    </div>
+
+    <div class="min-h-screen w-2/3 shadow-lg p-2">
+
+        {% include "partials/results.html" %}
+
+    </div>
+
+</div>
+
+{% endblock content %}
